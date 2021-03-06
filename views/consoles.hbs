@@ -1,0 +1,9 @@
+<h1>Liste des consoles</h1>
+
+{{#each consoles}}
+	<div class="game_card">
+		<img src="images/{{ this.image }}" alt="">
+		<p class="game-title">{{ this.name }}</p>
+		<a href="/games/{{ this.name }}" class="btn">Consulter</a>
+	</div>
+{{/each}}
