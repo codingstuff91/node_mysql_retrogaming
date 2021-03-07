@@ -25,6 +25,10 @@ router.post('/register', (req,res) => {
     errors.password = "Veuillez saisir un mot de passe"
   }
   
+  if(req.body.username != "" && req.body.email != "" && req.body.password != ""){
+    res.render('register', {success : 'Bravo !! Vous etes maintenant inscrit sur le site !'})
+  }
+
   console.log(errors);
   res.render('register', {validation_errors : errors})
 
